@@ -17,6 +17,11 @@
     <dt class="col-sm-3">Send Your Resume Or Visit Here</dt>
     <dd class="col-sm-9">{!! $data['how_to_apply'] !!}</dd>
 
+    <dd class="col-sm-9">
+        <img width="500px" 
+        src="@php echo $data['company_logo'] @endphp">
+    </dd>
+
 </dl>
 
 <a class="btn btn-primary" href="{{ URL('/list') }}" role="button">
