@@ -34,6 +34,7 @@
             <th>Title</th>
             <th>Company</th>
             <th>Type</th>
+            <th>Location</th>
             <th class="Actions">Actions</th>
         </tr>
     </thead>
@@ -43,6 +44,8 @@
             <td>{{ $list['title'] }}</td>
             <td>{{ $list['company'] }}</td>
             <td>{{ $list['type']}}</td>
+            <td>{{ $list['location']}}</td>
+            
             <td class="actions">
                 <a href="{{ URL('list', 
                     ['list' => $list['id']] )}}" alt='View' title='View'>

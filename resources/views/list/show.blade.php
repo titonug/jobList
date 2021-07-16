@@ -6,16 +6,16 @@
 
 @section('konten')
 <dl class="row">
+<dt class="col-sm-3"></dt>
+    <dd class="col-sm-3">{{ $data['location'] }}</dd>
+    <dt class="col-sm-3"></dt>
+    <dd class="col-sm-3">{{ $data['title'] }}</dd>
 
-    <dd class="col-sm-9">{{ $data['location'] }}</dd>
-    <dd class="col-sm-9">{{ $data['title'] }}</dd>
-
-    <dt class="col-sm-3">Description</dt>
-    {{ $data['description'] }}
-
-
+    <dd class="col-sm-9">{!! $data['description'] !!}</dd>
+    
     <dt class="col-sm-3">How to Apply</dt>
-    <dd class="col-sm-9">{{ $data['how_to_apply'] }}</dd>
+    <dt class="col-sm-3">Send Your Resume Or Visit Here</dt>
+    <dd class="col-sm-9">{!! $data['how_to_apply'] !!}</dd>
 
 </dl>
 
