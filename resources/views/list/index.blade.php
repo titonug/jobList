@@ -28,7 +28,24 @@
     </form>
 </div>
 
-<table id="example" class="table table-striped table-bordered" style="width:100%">
+<div class="container">
+    <div class="list-group">
+        @foreach($data as $list)
+        <a href="{{ URL('list', ['list' => $list['id']] )}}" class="list-group-item list-group-item-action">
+        <p><strong>{{ $list['title'] }}</strong></p> 
+        <p>
+            <span style="color:Grey;">{{ $list['company'] }} </span>
+            <span style ="color:Red;"> - {{ $list['type']}}</span> 
+        </p>
+        <p>
+            <span> Location : </span>
+            <span> {{ $list['location']}}   </span>
+        </p>
+        </a>
+        @endforeach
+    </div>
+</div>
+<!-- <table id="example" class="table table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
             <th>Title</th>
@@ -56,6 +73,6 @@
         @endforeach
 
     </tbody>
-</table>
+</table> -->
 
 @endsection
