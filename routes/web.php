@@ -22,12 +22,12 @@ Route::post('register', 'AuthController@register');
 Route::get('logout', 'AuthController@logout')->name('logout');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/list', [ListController::class, 'index'] )->name('index');
-    Route::get('/search', [ListController::class, 'search'] );
-    Route::get('/list/{id}', [ListController::class, 'show'] );
+    Route::get('/list', [ListController::class, 'index'])->name('index');
+    Route::get('/search', [ListController::class, 'search']);
+    Route::get('/list/{id}', [ListController::class, 'show']);
     // Route::post('/list', [ListController::class, 'store'] );
     // Route::put('/list/{id}', [ListController::class, 'update'] );
     // Route::delete('/list/{id}', [ListController::class, 'destroy'] );
-//    Route::resource('post', 'PostController');
+    //    Route::resource('post', 'PostController');
     Route::get('logout', 'AuthController@logout')->name('logout');
 });
