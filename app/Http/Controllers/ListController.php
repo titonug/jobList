@@ -49,6 +49,8 @@ class ListController extends Controller
     {
         
         try {
+            $location = strtolower($request->location);
+            $description = strtolower($request->description);
             $title = "Index";
             $titleContent = "Selamat Datang";
             $headers = [
@@ -57,7 +59,7 @@ class ListController extends Controller
             $method = "GET";
             $data_array = "";
             $curl = new curl();
-            $data = $curl->curl('.json?description='.$request->description.'&location='.$request->location, $headers, $method, $data_array);
+            $data = $curl->curl('.json?description='.$description.'&location='.$location, $headers, $method, $data_array);
             $url = $curl->url;
             
             Log::channel('mylog')->info('Endpoint API' . $url . '.json?Description='.$request->description.'&location='.$request->location.'?METHOD='.$method, 
